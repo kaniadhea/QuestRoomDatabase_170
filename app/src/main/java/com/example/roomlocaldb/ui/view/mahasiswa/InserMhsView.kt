@@ -56,7 +56,10 @@ fun InserMhsView(
 
     LaunchedEffect(uiState.snackBarMessage) {
         uiState.snackBarMessage?.let { messege ->
-            coroutineScope.launch {  }
+            coroutineScope.launch {
+                snackbarHostState.showSnackbar(messege) //tampilkan snackbar
+                viewModel.resetSnackBarMessage()
+            }
 
         }
     }
