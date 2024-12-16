@@ -80,6 +80,7 @@ fun InserMhsView(
                 judul = "Tambah Mahasiswa"
             )
 
+            //isi bodi
             InsertBodyMhs(
                 uiState = uiState,
                 onValueChange = {updateEvent ->
@@ -215,7 +216,7 @@ fun FormMahasiswa(
         Row (
             modifier = Modifier.fillMaxWidth()
         ){
-            jenisKelamin.forEach{kelas ->
+            kelas.forEach{kelas ->
                 Row (
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Start
